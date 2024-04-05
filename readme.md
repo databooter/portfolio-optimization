@@ -24,23 +24,31 @@ To use the PortfolioAnalysis class, follow these steps:
 
 ### Initialization: Instantiate the class with the required parameters.
 ```python
-from portfolio_analysis import PortfolioAnalysis
+from models import PortfolioAnalysis
+from assets import industries
 
-portfolio = PortfolioAnalysis(
-    industry="Technology",
-    tickers=["AAPL", "MSFT", "GOOGL"],
-    start="2020-01-01",
-    end="2020-12-31",
-    trading_days=252,
-    risk_free_rate=0.01,
-    simulations=1000,
-    investment=10000
+start = "2018-03-25"
+today = datetime.datetime.today().strftime('%Y-%m-%d')
+trading_days = 252  # 252 trading days in a year
+rf = 0.05035  # 5% risk-free rate (1-year Treasury Bill as of 4/1/2024)
+
+
+uranium_analysis = PortfolioAnalysis(
+    industry="uranium",
+    tickers=industries.uranium,
+    start=start,
+    end=today,
+    trading_days=trading_days,
+    risk_free_rate=rf,
+    simulations=100000,
+    investment=1000
 )
+uranium_analysis.execute()
 ```
 
 ### Execute Analysis: Call the execute method to perform the portfolio analysis.
 ```python
-portfolio.execute()
+uranium_analysis.execute()
 ```
 ### Review Results: Check the 'outputs' directory for the CSV files with trading data and performance results.
 #### Examples
