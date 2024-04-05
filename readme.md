@@ -49,7 +49,6 @@ After executing the analysis, the following files will be generated in the 'outp
 #### Documentation
 Please refer to the class docstrings for detailed documentation of each method and its parameters.
 
-
-License
-
+#### License
+See LICENSE.txt file
 
