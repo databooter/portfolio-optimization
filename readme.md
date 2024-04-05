@@ -51,11 +51,11 @@ uranium_analysis.execute()
 uranium_analysis.execute()
 ```
 ### Review Results: Check the 'outputs' directory for the CSV files with trading data and performance results.
-#### Examples
+#### Example
 After executing the analysis, the following files will be generated in the 'outputs' directory:
-
-#### Documentation
-Please refer to the class docstrings for detailed documentation of each method and its parameters.
+- uranium_2018-03-25_2024-04-02_combined_results.csv
+- uranium_2018-03-25_2024-04-02_simulated_portfolio_results.csv
+- uranium_2018-03-25_2024-04-02_trading_data.csv
 
 #### License
 See LICENSE.txt file
